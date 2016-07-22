@@ -19,19 +19,20 @@ class ViewController: UIViewController {
         let numberHalf: [Int] = [6,4,12,4]
         let itemHalf: [String] = ["Bananas", "Apples", "Eggs", "Rolls"]
         
-        makeShoppingList(itemHalf, quantityOfItems: numberHalf)
+        shoppingList = makeShoppingList(itemHalf, quantityOfItems:numberHalf)
+        print(shoppingList)
     }
     
     
     func makeShoppingList(items:[String], quantityOfItems:[Int]) ->[String] {
-        var returnArray: [String] = []
-        for (index, item) in items.enumerate() {
+        var shoppingList: [String] = []
+        for (index, _) in items.enumerate() {
             let count: Int = index + 1
             let numberOfItems: Int = quantityOfItems[index]
-            let newString:String = "\(count). \(numberOfItems) \(items[index])"
-            returnArray.append(newString)
+            let listItem: String = "\(count). \(numberOfItems) \(items[index])"
+            shoppingList.append(listItem)
         }
-        return returnArray
+        return shoppingList
 
     }
 }
