@@ -14,11 +14,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
         let numberHalf: [Int] = [6,4,12,4]
         let itemHalf: [String] = ["Bananas", "Apples", "Eggs", "Rolls"]
-        
         shoppingList = makeShoppingList(itemHalf, quantityOfItems:numberHalf)
         print(shoppingList)
     }
@@ -33,6 +30,5 @@ class ViewController: UIViewController {
             shoppingList.append(listItem)
         }
         return shoppingList
-
     }
 }
